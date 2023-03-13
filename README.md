@@ -4,9 +4,9 @@ Através de rotas criadas com o Express, é possível realizar as operações b�
 (Create, Read, Update e Delete) em usuários, incluindo a criptografia de senhas com BcryptJS. A estruturação do banco de dados é realizada através de migrations 
 e a aplicação é configurada para tratar erros através de uma classe de exceções customizada.
 
-#Ferramentas utilizadas:#
+### Ferramentas utilizadas:
 
-Node.js
-SQLite
-Express
-BcryptJS
+# Node.js
+# SQLite
+# Express
+# BcryptJS
