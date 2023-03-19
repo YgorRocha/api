@@ -40,8 +40,8 @@ class usersControllers {
             throw new AppError("this email already exists")
         }
 
-        user.name = name;
-        user.email = email;
+        user.name = name ?? user.name;
+        user.email = email ?? user.email;
 
         if( password && !old_password){
             throw new AppError("You need to inform your old password to update")
@@ -62,11 +62,11 @@ class usersControllers {
         name = ?,
         email = ?,
         password = ?,
-        updated_at = ?
+        updated_at = DATETIME('now')
         WHERE id = ?
-        `, [user.name, user.email, user.password ,new Date(), id]);
+        `, [user.name, user.email, user.password, id]);
 
-        return response.json();
+        return response.json(); 
     }
 }
 
